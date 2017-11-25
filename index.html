@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>includerの週報</title>
+  </head>
+  <body>
+    <header>
+      <div class="team-logo-box">
+        <img src="/common/img/includer_logo.png" class="team-logo" />
+      </div>
+      <nav class="header-list-box">
+        <li class="header-list"><p>test1</p></li>
+        <li class="header-list"><p>test2</p></li>
+        <li class="header-list"><p>test3</p></li>
+        <li class="header-list"><p>test4</p></li>
+      </nav>
+    </header>
+    <main>
+      <form class="report-form" action="/controller/reportSend.php" method="post">
+        <p>作業者</p>
+        <input type="text" name="user" placeholder="作業者名" value="" />
+        <p>月</p>
+        <input type="number" name="month" min="1" max="12" />月
+        <p>週</p>
+        第<input type="number" name="week" min="1" max="5" />週
+        <p>プロジェクト</p>
+        <select name="project">
+          <option value="web">includerウェブ</option>
+          <option value="blog">includerブログ</option>
+          <option value="momo">MOMOシステム</option>
+          <option value="tchcick">tchick</option>
+          <option value="manage">チームサービス管理</option>
+          <option value="meeting">定例会</option>
+          <option value="rule">運用ルール</option>
+        </select>
+        <p>作業時間</p>
+        <input type="number" name="work_time" min="0" max="999" />時間作業した
+        <p>作業内容</p>
+        <textarea name="description"></textarea>
+        <input type="submit" name="reportSend" value="send" />
+      </form>
+    </main>
+    <footer>
+      <small>2017&copy;includer</small>
+    </footer>
+  </body>
+</html>
